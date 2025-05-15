@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  /*background-image: radial-gradient(circle, #A67BC7 0%, #764A98 100%);*/
+  background-image: url('./img/fundotf.png');
+  color: #e1e1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  background-position: top center; /* Centraliza a imagem horizontal e verticalmente */
+}
+
+@font-face {
+  font-family: 'Lato-Light'; /* Defina o nome da sua fonte */
+  src: url('./fonts/Lato-Light.ttf') format('truetype'); /* Caminho para o arquivo .ttf */
+  font-weight: normal; /* Peso da fonte */
+  font-style: normal;  /* Estilo da fonte */
+}
+
+@font-face {
+  font-family: 'Yftoow-R'; /* Defina um nome único para a segunda fonte */
+  src: url('./fonts/Yftoow-R.ttf') format('truetype'); /* Caminho para o arquivo da segunda fonte */
+  font-weight: normal; /* Defina o peso da fonte, ajuste se necessário */
+  font-style: normal;  /* Defina o estilo da fonte, ajuste se necessário */
+}
+
+@font-face {
+  font-family: 'DMSerifText-Regular'; /* Defina um nome único para a segunda fonte */
+  src: url('./fonts/DMSerifText-Regular.ttf') format('truetype'); /* Caminho para o arquivo da segunda fonte */
+  font-weight: normal; /* Defina o peso da fonte, ajuste se necessário */
+  font-style: normal;  /* Defina o estilo da fonte, ajuste se necessário */
+}
+
+.bg-text-animation {
+  position: absolute;
+  top: 5rem;
+  font-size: 12rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  -webkit-text-stroke: 2px #764A98;
+  -webkit-text-fill-color: transparent;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: -1;
+  user-select: none;
+}
+
+.my-photo {
+  width: 6rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid #2A506C;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sosmed i {
+  font-size: 1.5rem;
+  color: #2A506C;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.sosmed i:hover {
+  color: white;
+}
+
+.sosmed a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+ul {
+  width: 80%;
+  max-width: 40rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul.links li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.idfullano {
+    display: block; /* Para ocupar a largura total e evitar comportamentos inline */
+    width: 120%; /* Ocupa 80% da largura do container pai */
+    max-width: 500px; /* Define uma largura máxima para não ficar muito grande em desktops */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 1px auto; /* Centraliza a imagem e adiciona margem vertical */
+}
+
+.slogan {
+  text-align: center;
+  font-family:'Lato-Light', sans-serif;
+  color: #2A506C;
+  font-size: 20px;
+}
+
+.tituloft {
+  text-align: center;
+  color: #2A506C;
+  font-family:'DMSerifText-Regular', sans-serif;
+  font-size: 45px;
+  line-height: 1.0;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* força 2 colunas */
+  justify-content: center; /* centraliza o grid na horizontal */
+  gap: 0.1rem 3rem; /* espaçamento entre linhas e colunas */
+  padding: 0;
+  list-style: none;
+}
+
+
+.link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza o círculo e o texto no mesmo eixo */
+}
+
+.link-card {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px #193447;
+  border: 2px solid #2A506C;
+  text-decoration: none;
+}
+
+.icone-grande {
+  font-size: 2rem;
+  color: #2A506C;
+}
+
+.link-label {
+  margin-top: 0.5rem;
+  font-size: 22px;
+  color: #2A506C;
+  font-family: 'DMSerifText-Regular', sans-serif;
+  text-align: center;
+}
+
+.link-card:hover {
+  border: 2px solid white;
+}
+
+.logosgf img{
+  width: 1px;
+  height: 1px;
+}
+
+.links .link-text {
+  text-align: center;
+  flex-grow: 1;
+  font-family:'DMSerifText-Regular', sans-serif;
+  font-size: 26px;
+  color: #2A506C;
+}
+
+.link-action {
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.copyright {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2A506C;
+  font-size: 1rem;
+  font-family:'Yftoow-R', sans-serif;
+}
+
+.copyright img {
+  width: 13rem;
+  /*opacity: 0.4;*/
+}
+
+#toast {
+  width: max-content;
+  position: fixed;
+  top: 0;
+}
+
+.toast-container {
+  background-color: white;
+  color: #0f0f25;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  animation: muncul 300ms ease-in-out;
+}
+
+.toast-gone {
+  animation: hilang 1s ease-in-out 1s;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hilang {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #191931;
+  color: #e1e1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+}
+
+.bg-text-animation {
+  position: absolute;
+  top: 5rem;
+  font-size: 12rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  -webkit-text-stroke: 2px #2d2d56;
+  -webkit-text-fill-color: transparent;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: -1;
+  user-select: none;
+}
+
+.my-photo {
+  width: 10rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sosmed i {
+  font-size: 1.5rem;
+  color: #8787a3;
+}
+
+.sosmed i:hover {
+  color: white;
+}
+
+.sosmed a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+ul {
+  width: 80%;
+  max-width: 40rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul.links li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.slogan {
+  text-align: center;
+}
+
+.links {
+  margin-top: 1rem;
+}
+
+.link-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242442;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 8px 10px 0 #0f0f25;
+  border: 2px solid #2d2d56;
+}
+
+.link-card:hover {
+  border: 2px solid white;
+}*/
+/*
+.links .link-icon {
+  background-image: linear-gradient(to top, purple, cyan);
+  padding: 0.5rem;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logosgf img{
+  width="50"; 
+  height="50";
+}
+
+.links .link-icon i {
+  color: white;
+}
+
+.links .link-text {
+  text-align: center;
+}
+
+.link-action {
+  color: #8787a3;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.copyright {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8787a3;
+  font-size: 0.75rem;
+}
+
+.copyright img {
+  width: 13rem;
+  opacity: 0.4;
+}
+
+#toast {
+  width: max-content;
+  position: fixed;
+  top: 0;
+}
+
+.toast-container {
+  background-color: white;
+  color: #0f0f25;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  animation: muncul 300ms ease-in-out;
+}
+
+.toast-gone {
+  animation: hilang 1s ease-in-out 1s;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hilang {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+*/

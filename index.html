@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullano Praia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="icon" href="./img/logotf.png">
+</head>
+
+<body>
+    <!-- Profile -->
+    <img class="my-photo" src="./img/logosTF.png" alt="AR Logo">
+    <h1 class="tituloft">THÂMARA & FERNANDO</h1>
+    <p class="slogan">"Nosso relacionamento é a soma <br> de dois inteiros que decidiram<br> crescer juntos." <br> 20/09/2025</p>
+
+    <!-- Sosial Media -->
+    <!--<div class="sosmed">
+        <a href="https://www.tiktok.com/@fullano.praia" target="_blank">
+            <i class="ph ph-tiktok-logo"></i>
+        </a>
+        <a href="https://www.instagram.com/fullanopraia/" target="_blank">
+            <i class="ph ph-instagram-logo"></i>
+        </a> -->
+        <!--<a href="https://youtube.com/@rsad" target="_blank">
+            <i class="ph ph-youtube-logo"></i>
+        </a> -->
+        <!-- <a href="https://www.linkedin.com/company/grupo-fullano/" target="_blank">
+            <i class="ph ph-linkedin-logo"></i>
+        </a> -->
+        <!-- <a href="https://github.com/grupofullano" target="_blank">
+            <i class="ph ph-github-logo"></i>
+        </a> -->
+    <!-- </div> -->
+
+    <!-- Link List -->
+    <ul class="links">
+        <li class="link-item">
+          <a href="#" class="link-card">
+            <i class="ph ph-notepad icone-grande"></i>
+          </a>
+          <p class="link-label">Lista de <br> Presentes</p>
+        </li>
+        <li class="link-item">
+          <a href="#" class="link-card">
+            <i class="ph ph-instagram-logo icone-grande"></i>
+          </a>
+          <p class="link-label">Instagram</p>
+        </li>
+        <li class="link-item">
+          <a href="#" class="link-card">
+            <i class="ph ph-calendar icone-grande"></i>
+          </a>
+          <p class="link-label">Fotos</p>
+        </li>
+        <li class="link-item">
+            <a href="#" class="link-card">
+              <i class="ph ph-calendar icone-grande"></i>
+            </a>
+            <p class="link-label">Cardápios</p>
+          </li>
+    </ul>
+      
+        
+              
+            <!-- <a href="https://drive.google.com/drive/u/5/folders/1D8CydBS3LXtiJzmdPiTsPBWmLlWv6Pr6" target="_blank" class="link-card" style="display: flex; align-items: center; justify-content: space-between;">
+                <i class="ph ph-notepad icone-grande"></i>
+                <p class="link-text" style="text-align: center; flex-grow: 1;"></p>
+                <div class="link-action">
+                     <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://linklist.ai/qngs5gc1ni" target="_blank" class="link-card" style="display: flex; align-items: center; justify-content: space-between;">
+                <i class="ph ph-google-chrome-logo icone-grande"></i>
+                <p class="link-text" style="text-align: center; flex-grow: 1;"></p>
+                <div class="link-action">
+                     <i class="ph-fill ph-copy"></i> 
+                </div> 
+            </a>
+        </li>
+        <li>
+            <a href="https://www.avaliarme.com/qr/nL2z7DvU9s1srysYKfrD" target="_blank" class="link-card" style="display: flex; align-items: center; justify-content: space-between;">
+                <i class="ph ph-star icone-grande"></i>
+                <p class="link-text" style="text-align: center; flex-grow: 1;"></p>
+                 <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div> 
+            </a>
+        </li>
+        <li>
+            <a href="https://api.whatsapp.com/send/?phone=5583994086376&text&type=phone_number&app_absent=0" target="_blank" class="link-card" style="display: flex; align-items: center; justify-content: space-between;">
+                <i class="ph ph-phone icone-grande"></i>
+                <p class="link-text" style="text-align: center; flex-grow: 1;"></p>
+                 <div class="link-action">
+                     <i class="ph-fill ph-copy"></i> 
+                </div> 
+            </a>
+            
+        </li> -->
+        
+    <!-- </ul> -->
+   
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.8295225422366!2d-34.83279162383912!3d-7.029314892972524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acde44c582b275%3A0x7f756be4d16d6036!2sLovina%20Ponta%20de%20Campina%20%7C%20Bar%20%7C%20Restaurante%20em%20Cabedelo!5e0!3m2!1spt-BR!2sbr!4v1747315746529!5m2!1spt-BR!2sbr" 
+        width="80%" 
+        height="300" 
+        style="border: 2px solid #2A506C; border-radius: 10px; margin: 20px auto; display: block;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe> -->
+
+    <audio id="minhaMusica" src="./audio/trilhasonora.mp3" loop controls style="display: none;"></audio>
+  
+    <script>
+      const body = document.querySelector('body');
+      const musica = document.getElementById('minhaMusica');
+      let audioIniciado = false;
+  
+      function iniciarAudio() {
+        if (!audioIniciado) {
+          musica.play().then(() => {
+            console.log('Áudio iniciado com sucesso.');
+            audioIniciado = true;
+            body.removeEventListener('click', iniciarAudio);
+            body.removeEventListener('touchstart', iniciarAudio);
+            musica.style.display = 'block';
+          }).catch(error => {
+            console.error('Erro ao iniciar o áudio:', error);
+            musica.style.display = 'block'; // Mostrar controles em caso de falha
+          });
+        }
+      }
+  
+      window.addEventListener('DOMContentLoaded', iniciarAudio);
+      window.addEventListener('load', iniciarAudio);
+  
+      body.addEventListener('click', iniciarAudio);
+      body.addEventListener('touchstart', iniciarAudio);
+  
+      musica.addEventListener('canplaythrough', function() {
+        console.log('Áudio pronto para tocar.');
+      });
+    </script>
+
+    <div class="copyright">
+        <!-- <img src="./img/logoGFrodape.png" alt="AR Logo"> -->
+        <p>Copyright | Thâmara & Fernando &copy; 2025</p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast">
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
